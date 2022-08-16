@@ -1,7 +1,6 @@
+import 'package:faracode_flutter_chat/ConstantS/my_colors.dart';
 import 'package:faracode_flutter_chat/gen/assets.gen.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class CustomAppBar extends StatelessWidget {
@@ -15,8 +14,8 @@ class CustomAppBar extends StatelessWidget {
       decoration: const BoxDecoration(
         borderRadius: BorderRadius.only(
             bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15)),
-        color: Colors.grey,
-        //TODO : HARDCODE
+        color: MyColors.primaryColor,
+       
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,21 +25,21 @@ class CustomAppBar extends StatelessWidget {
             margin: EdgeInsets.only(right: 80),
             child: Row(children: [
                IconButton(
-              onPressed: () {}, icon: Icon(Icons.arrow_back_ios_new_outlined)),
+              onPressed: () {}, icon: const Icon(Icons.arrow_back_ios_new_outlined),color: MyColors.textColor,),
               CircleAvatar(
                 maxRadius: 25,
                 backgroundImage: AssetImage(Assets.images.profileTest.path),
               ),
-              SizedBox(
+              const SizedBox(
                 width: 8,
               ),
               Text("shoebir seifi",
-                  style: Theme.of(context).textTheme.headline1),
+                  style: Theme.of(context).textTheme.headline1,),
             ]),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.more_vert),
+            icon: const Icon(Icons.more_vert,color: MyColors.textColor,),
           )
         ],
       ),

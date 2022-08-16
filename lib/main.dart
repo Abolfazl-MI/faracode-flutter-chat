@@ -1,21 +1,22 @@
-import 'package:faracode_flutter_chat/Components/app_bar.dart';
+
 import 'package:faracode_flutter_chat/ConstantS/my_colors.dart';
-import 'package:faracode_flutter_chat/Screens/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:web_socket_channel/web_socket_channel.dart';
+import 'package:get/get.dart';
 
+import 'Screens/main_screen.dart';
 import 'gen/fonts.gen.dart';
 
+// 
+
+
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(
-      const SystemUiOverlayStyle(
-        statusBarColor: MyColors.systemNavigationBar,
-        statusBarIconBrightness: Brightness.dark,
-        systemNavigationBarColor:  MyColors.systemNavigationBar,
-        systemNavigationBarIconBrightness: Brightness.dark
-        ));
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+      statusBarColor: MyColors.systemNavigationBar,
+      statusBarIconBrightness: Brightness.dark,
+      systemNavigationBarColor: MyColors.systemNavigationBar,
+      systemNavigationBarIconBrightness: Brightness.dark));
   runApp(const MyApp());
 }
 
@@ -25,27 +26,27 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-       localizationsDelegates: const [
+      localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
       title: 'faracode flutter chat',
       theme: ThemeData(
-         fontFamily: FontFamily.roboto,
+        fontFamily: FontFamily.roboto,
         textTheme: const TextTheme(
           headline1: TextStyle(
             fontFamily: FontFamily.roboto,
             fontSize: 18,
             fontWeight: FontWeight.w700,
-            color: Colors.black,
-          ),),
-
+            color: MyColors.textColor,
+          ),
+        ),
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'flutter chat app'),
     );
   }
 }
@@ -60,16 +61,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        
-       
-        body: MainScreen()
-      ),
+    return const SafeArea(
+      child: Scaffold(body: MainScreen()),
     );
   }
 }

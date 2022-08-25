@@ -1,7 +1,7 @@
-import 'package:faracode_flutter_chat/ConstantS/my_colors.dart';
 import 'package:faracode_flutter_chat/gen/assets.gen.dart';
+import 'package:faracode_flutter_chat/view/constants/my_colors.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);

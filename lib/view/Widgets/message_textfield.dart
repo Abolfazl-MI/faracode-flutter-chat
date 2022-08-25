@@ -1,10 +1,10 @@
-import 'package:faracode_flutter_chat/ConstantS/my_colors.dart';
+import 'package:faracode_flutter_chat/controller/message_controller.dart';
+import 'package:faracode_flutter_chat/view/constants/my_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 
-import '../../Controllers/message_controller.dart';
 
 class MessageTextField extends StatelessWidget {
  

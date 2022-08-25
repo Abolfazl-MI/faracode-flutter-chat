@@ -1,7 +1,8 @@
+import 'package:faracode_flutter_chat/Models/message_model.dart';
 import 'package:faracode_flutter_chat/Models/users.dart';
 import 'package:flutter/material.dart';
 
-import '../../Models/message_model.dart';
+
 import '../../components/components.dart';
 
 class ChatBubble extends StatelessWidget {

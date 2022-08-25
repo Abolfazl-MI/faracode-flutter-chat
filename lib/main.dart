@@ -1,11 +1,11 @@
 
-import 'package:faracode_flutter_chat/ConstantS/my_colors.dart';
+import 'package:faracode_flutter_chat/view/constants/my_colors.dart';
+import 'package:faracode_flutter_chat/view/screens/home/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get/get.dart';
 
-import 'Screens/main_screen.dart';
 import 'gen/fonts.gen.dart';
 
 // 
